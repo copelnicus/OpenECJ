@@ -1,0 +1,16 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="base_header(title)">
+
+	<title th:text="${title==null}? 'Spring boot de Hello world!' : ${title}+' | Spring boot de Hello world!'">Spring boot de Hello world!</title>
+
+	<link href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet" media="all" >
+	<script src="/js/jquery-3.4.1.min.js" th:src="@{/js/jquery-3.4.1.min.js}" type="text/javascript"></script>
+	<script src="/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}" type="text/javascript"></script>
+</head>
+<header th:fragment="header">
+ 	<div class="ui three item menu" th:include="common/header::header"></div>
+</header>
+<footer th:fragment="footer">
+ 	<div class="ui three item menu" th:include="common/footer::footer"></div>
+</footer>
+</html>
